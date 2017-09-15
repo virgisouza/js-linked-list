@@ -52,10 +52,16 @@ function linkedListGenerator(){
   function remove() {
 
   }
-  function get(number) { // function get(2){}
-    head[number];
+  function get(number) { // function get(2){} list.next.next
+    var currentNode = head;
 
-    return //nth node
+    for (var i = 0; i < number; i++) {
+      currentNode = currentNode.next;
+      if(currentNode === null){
+        return false;
+      }
+    }
+     return currentNode;
   }
 
   function insert() {
