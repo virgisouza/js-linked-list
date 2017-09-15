@@ -22,40 +22,42 @@
  */
 function linkedListGenerator(){
   var head = null; //list
-
+  var tail = null;
+  var length = 0;
 
   function getHead() {
     return head;
   }
   function getTail() {
-    return head;
+    return tail;
   }
 
-  function add(value) {
+  function add(value) { //head
     var node = {
-      value : value,
+      value : value, //head = null
       next : null
     }
-    if(value === null){
-      value = node;
-    }else if(value.next === null) {
-      value.next = node;
-      head = node;
-
-
-
-      //node.length++
+    if(head === null){ //null === null
+      head = node; //head = {value: null, next: null}
+      tail = node;
+    }else{
+      tail.next = node;
+      tail = node;
     }
+
+    length++;
+
     return node;
   }
-
-
   function remove() {
 
   }
-  function get() {
+  function get(number) { // function get(2){}
+    head[number];
 
+    return //nth node
   }
+
   function insert() {
 
   }
