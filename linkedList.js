@@ -21,7 +21,7 @@
 
  */
 function linkedListGenerator(){
-  var head = null;
+  var head = null; //list
 
 
   function getHead() {
@@ -30,21 +30,26 @@ function linkedListGenerator(){
   function getTail() {
     return head;
   }
-  function add(newLink) {
-    newNodeObj = {
-      value : 'Ready Player One',
-      next : newNodePointer };
-    if(newLink === null){
 
-      newNodeObj.length++;
-    }else{
-      //don't add a node
+  function add(value) {
+    var node = {
+      value : value,
+      next : null
     }
+    if(value === null){
+      value = node;
+    }else if(value.next === null) {
+      value.next = node;
+      head = node;
 
 
 
-    return ;
+      //node.length++
+    }
+    return node;
   }
+
+
   function remove() {
 
   }
